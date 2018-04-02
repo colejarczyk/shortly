@@ -1,0 +1,12 @@
+.place {
+  text-align:center;
+  padding: 120px 0 30px 0;
+}
+.place.small {
+  padding: 15px 0;
+}
+input {
+  padding: 5px;
+  text-align: center;
+  font-size: 14px;
+}
