@@ -1,38 +1,52 @@
 import React, { Component } from 'react';
-import Header from './Header';
-import './Dashboard.css';
+import PropTypes from 'prop-types';
+import { withStyles } from 'material-ui/styles';
+import Paper from 'material-ui/Paper';
+import Grid from 'material-ui/Grid';
+
+const styles = theme => ({
+  root: {
+    flexGrow: 1,
+    backgroundColor: theme.palette.primary.main,
+    width: '100%',
+    height: '100%',
+  },
+  paper: {
+    textAlign: 'center',
+    color: theme.palette.common.white,
+    backgroundColor: theme.palette.primary.main,
+    marginTop: '50%',
+  },
+  grid: {
+    spacing: 24,
+    alignItems: 'center',
+    direction: 'row',
+    justify: 'center',
+  }
+});
 
 class Dashboard extends Component {
-
-  select = (url) => {
-    this.props.history.push('/restaurant/' + url);
-  }
-
   render() {
     return (
-      <div>
-       <Header />
-       <div className="tableWrapper">
-         <table>
-           <tbody>
-            <tr>
-              <td onClick={() => this.select('dance')} style={{backgroundColor: "#342343"}}>Taniec</td>
-              <td onClick={() => this.select('talk')} style={{backgroundColor: "#457457"}}>Rozmowa</td>
-            </tr>
-            <tr>
-              <td onClick={() => this.select('date')} style={{backgroundColor: "#F65E64"}}>Randka</td>
-              <td onClick={() => this.select('fun')} style={{backgroundColor: "#111221"}}>Zabawa</td>
-            </tr>
-            <tr>
-              <td onClick={() => this.select('events')} style={{backgroundColor: "#AC4312"}}>Events</td>
-              <td onClick={() => this.select('all')} style={{backgroundColor: "#D43F43"}}>Wszystkie</td>
-            </tr>
-           </tbody>
-         </table>
-       </div>
+      <div className={this.props.classes.root}>
+        <Grid container spacing={this.props.classes.grid.spacing} 
+                        alignItems={this.props.classes.grid.alignItems}
+                        direction={this.props.classes.grid.direction}
+                        justify={this.props.classes.grid.justify}
+        >
+          <Grid item xs={12}>
+            <Paper className={this.props.classes.paper} elevation={0}>
+              Put your phone on the NFC tag on the table
+            </Paper>
+          </Grid>
+        </Grid>
       </div>
     );
   }
 }
 
-export default Dashboard;
+Dashboard.propTypes = {
+  classes: PropTypes.object.isRequired,
+};
+
+export default withStyles(styles)(Dashboard);

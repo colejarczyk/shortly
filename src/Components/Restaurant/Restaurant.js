@@ -1,20 +1,29 @@
 import React from 'react';
-import './Restaurant.css';
-import Header from './Header.js';
-import Submenu from './Submenu.js';
+import PropTypes from 'prop-types';
+import { withStyles } from 'material-ui/styles';
+
 import restaurants from '../../restaurants.js';
 
+import Header from './Header';
+import Details from './Details';
+import ProductList from '../Product/ProductList';
+import MenuList from '../Menu/MenuList';
+
+const styles = theme => ({
+  restaurantName: {
+    textAlign: 'center',
+    fontWeight: '500',
+  },
+});
+
 class Restaurant extends React.Component {
-  renderContent = (url) => {
-    if(url.includes('menu')) {
-      return(<div>Menu</div>);
-    } else if(url.includes('reviews')) {
-      return(<div>Recenzje</div>);
-    } else if(url.includes('location')) {
-      return(<div>Lokalizacja</div>);
-    } else {
-      return(<div>O restauracji</div>);
+
+  getCurrentMenu = (restaurant) => {
+    let category = restaurant.filter(item => item.url === this.props.match.params.menu);
+    if (category.length === 0) {
+      return [];
     }
+    return category[0].products;
   }
 
   render() {
@@ -24,26 +33,31 @@ class Restaurant extends React.Component {
           .filter(item => item.url === this.props.match.params.name)
           .map((item, index) => {
             return (
-              <div key={index}>
-                <Header 
-                  background={item.img} 
-                  name={item.name}
-                  street={item.street}
-                  postCode={item.postCode}
-                  city={item.city}
+              <div key={`restaurant_${index}`}>
+
+                <Header
+                  categories={item.categories}
+                  backgroundImage={item.img}
                 />
-                <Submenu url={item.url} />
-                <div>
-                  <div>
-                    {this.renderContent(this.props.match.url)}
-                  </div>
-                </div>
+
+                <Details
+                  name={item.name}
+                  openingHours={item.openingHours}
+                  endingHours={item.endingHours}
+                />
+
+                <MenuList menu={item.menu} url={item.url} />
+                <ProductList products={this.getCurrentMenu(item.menu)} />
               </div>
             );
-        })}
+          })}
       </div>
     );
   }
 }
 
-export default Restaurant;
+Restaurant.propTypes = {
+  classes: PropTypes.object.isRequired,
+};
+
+export default withStyles(styles)(Restaurant);

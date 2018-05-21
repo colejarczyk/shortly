@@ -6,9 +6,7 @@ import {
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import './App.css';
-import Footer from './Components/Footer/Footer.js';
-import Dashboard from './Components/Dashboard/Dashboard.js';
-import RestaurantList from './Components/Restaurant/List';
+import Dashboard from './Components/Dashboard/Dashboard';
 import Restaurant from './Components/Restaurant/Restaurant';
 
 let reducers = function(){};
@@ -19,17 +17,12 @@ class App extends Component {
     return (
       <Provider store={store}>
         <Router>
-          <div>
-            <div style={{ marginBottom: 70, width: "100%" }}>
+          <div style={{width: "100%", height: "100%" }}>
+            <div style={{width: "100%", height: "100%" }}>
               <Route exact path="/" component={Dashboard} />
-              <Route path="/city" component={Dashboard} />
-              <Route exact path="/restaurant" component={RestaurantList} />
-              <Route exact path="/restaurant/:type" component={RestaurantList} />
-              <Route exact path="/restaurant/:type/:name" component={Restaurant} />
-              <Route exact path="/restaurant/:type/:name/:action" component={Restaurant} />
-              <Route path="/profile" component={Dashboard} />
+              <Route exact path="/restaurant/:name" component={Restaurant} />
+              <Route exact path="/restaurant/:name/:menu" component={Restaurant} />
             </div>
-            <Footer />
           </div>
         </Router>
       </Provider>

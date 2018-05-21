@@ -1,39 +1,64 @@
 import React from 'react';
-import { withRouter } from 'react-router-dom';
-import './Header.css';
-import BackIcon from 'material-ui/svg-icons/navigation/arrow-back';
-import FavoriteIcon from 'material-ui/svg-icons/action/favorite';
-import EmailIcon from 'material-ui/svg-icons/communication/email';
-import PhoneIcon from 'material-ui/svg-icons/communication/phone';
+import PropTypes from 'prop-types';
+import { withStyles } from 'material-ui/styles';
+import ClearIcon from 'material-ui-icons/Clear';
+
+const styles = theme => ({
+  background: {
+    filter: 'brightness(75%)',
+    backgroundSize: 'cover',
+    height: '170px',
+    width: '100%',
+  },
+  text: {
+    position: 'absolute',
+    top: '40px',
+    color: theme.palette.common.white,
+    width: '100%',
+    textAlign: 'center',
+  },
+  close: {
+    position: 'absolute',
+    top: '20px',
+    left: '20px',
+    color: theme.palette.common.white,
+  },
+  categories: {
+    fontSize: '20px',
+    textAlign: 'center',
+    fontWeight: 500,
+  },
+});
 
 class Header extends React.Component {
-
-  goBack = () => {
-    this.props.history.goBack();
-  }
-
   render() {
-    let className = "restaurant-header " + this.props.css
     return (
-      <div className={className} style={{ backgroundImage: `url(${this.props.background})` }}>
-        <BackIcon color="#fff" style={{ float: 'left', width: '60px', height: '33px' }} onClick={() => this.goBack()} />
-        <div className="restaurant-header-top">
-          <div className="restaurant-header-about">
-            <h1>{this.props.name}</h1>
-            <div className="restaurant-header-address">
-              {this.props.street} <br />
-              {this.props.postCode} {this.props.city}
-            </div>
-          </div>
+      <div>
+        <div className={this.props.classes.background} 
+             style={{ backgroundImage: `url(${this.props.backgroundImage})` }}
+        >
         </div>
-        <div className="restaurant-header-buttons">
-          <FavoriteIcon color="#FFF" />
-          <EmailIcon color="#FFF" />
-          <PhoneIcon color="#FFF" />
+        <div className={this.props.classes.close}>
+          <ClearIcon />
+        </div>
+        <div className={this.props.classes.text}>
+          {this.props.categories.map((category, index) => {
+            return (
+              <span key={`type_${index}`} className={this.props.classes.categories}>
+                <span>{category}</span>{index < this.props.categories.length - 1 && <span> . </span>}
+              </span>
+            );
+          })}
         </div>
       </div>
     );
   }
 }
 
-export default withRouter(Header);
+Header.propTypes = {
+  classes: PropTypes.object.isRequired,
+  categories: PropTypes.array.isRequired,
+  backgroundImage: PropTypes.string.isRequired,
+};
+
+export default withStyles(styles)(Header);
