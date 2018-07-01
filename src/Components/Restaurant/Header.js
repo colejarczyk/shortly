@@ -38,18 +38,6 @@ class Header extends React.Component {
              style={{ backgroundImage: `url(${this.props.backgroundImage})` }}
         >
         </div>
-        <div className={this.props.classes.close}>
-          <ClearIcon />
-        </div>
-        <div className={this.props.classes.text}>
-          {this.props.categories.map((category, index) => {
-            return (
-              <span key={`type_${index}`} className={this.props.classes.categories}>
-                <span>{category}</span>{index < this.props.categories.length - 1 && <span> . </span>}
-              </span>
-            );
-          })}
-        </div>
       </div>
     );
   }

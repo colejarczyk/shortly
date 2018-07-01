@@ -7,6 +7,7 @@ const styles = theme => ({
   root: {
     textAlign: 'center',
     fontWeight: '500',
+    backgroundColor: '#fff',
   },
   name: {
     padding: '15px',
@@ -30,10 +31,6 @@ class Details extends React.Component {
         <h1 className={this.props.classes.name}>
           {this.props.name}
         </h1>
-        <div className={this.props.classes.openingHours}>
-          <ScheduleIcon className={this.props.classes.icon} />
-          {this.props.openingHours} - {this.props.endingHours}
-        </div>
       </div>
     );
   }

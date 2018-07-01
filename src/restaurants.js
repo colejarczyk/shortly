@@ -23,8 +23,8 @@ const restaurants = [
             description: "Lorem ipsum dolor sit amet elit sed do eiusmod tempor",
             price: 14.00,
             currency: {
-              name: "dolar",
-              sign: "$"
+              name: "złoty",
+              sign: "zł"
             },
             img: '/images/hattori-hanzo-sushi/1.jpg',
           },
@@ -34,8 +34,8 @@ const restaurants = [
             description: "Lorem ipsum dolor sit amet elit sed do eiusmod tempor",
             price: 12.00,
             currency: {
-              name: "dolar",
-              sign: "$"
+              name: "złoty",
+              sign: "zł"
             },
             img: '/images/hattori-hanzo-sushi/2.jpg',
           },
@@ -45,8 +45,8 @@ const restaurants = [
             description: "Lorem ipsum dolor sit amet elit sed do eiusmod tempor",
             price: 15.00,
             currency: {
-              name: "dolar",
-              sign: "$"
+              name: "złoty",
+              sign: "zł"
             },
             img: '/images/hattori-hanzo-sushi/3.jpg',
           },
@@ -56,8 +56,8 @@ const restaurants = [
             description: "Lorem ipsum dolor sit amet elit sed do eiusmod tempor",
             price: 8.00,
             currency: {
-              name: "dolar",
-              sign: "$"
+              name: "złoty",
+              sign: "zł"
             },
             img: '/images/hattori-hanzo-sushi/4.jpg',
           },
@@ -72,8 +72,8 @@ const restaurants = [
             description: "Lorem ipsum dolor sit amet elit sed do eiusmod tempor",
             price: 9.95,
             currency: {
-              name: "dolar",
-              sign: "$"
+              name: "złoty",
+              sign: "zł"
             },
             img: '/images/hattori-hanzo-sushi/5.jpg',
           },
@@ -82,8 +82,8 @@ const restaurants = [
             description: "Lorem ipsum dolor sit amet elit sed do eiusmod tempor",
             price: 4.55,
             currency: {
-              name: "dolar",
-              sign: "$"
+              name: "złoty",
+              sign: "zł"
             },
             img: '/images/hattori-hanzo-sushi/6.jpg',
           },
@@ -92,8 +92,8 @@ const restaurants = [
             description: "Lorem ipsum dolor sit amet elit sed do eiusmod tempor",
             price: 3.95,
             currency: {
-              name: "dolar",
-              sign: "$"
+              name: "złoty",
+              sign: "zł"
             },
             img: '/images/hattori-hanzo-sushi/7.jpg',
           },
@@ -102,8 +102,88 @@ const restaurants = [
             description: "Lorem ipsum dolor sit amet elit sed do eiusmod tempor",
             price: 3.39,
             currency: {
-              name: "dolar",
-              sign: "$"
+              name: "złoty",
+              sign: "zł"
+            },
+            img: '/images/hattori-hanzo-sushi/8.jpg',
+          },
+          {
+            name: "Spicy Summer Wrap",
+            description: "Lorem ipsum dolor sit amet elit sed do eiusmod tempor",
+            price: 9.95,
+            currency: {
+              name: "złoty",
+              sign: "zł"
+            },
+            img: '/images/hattori-hanzo-sushi/5.jpg',
+          },
+          {
+            name: "Sashimi Salad",
+            description: "Lorem ipsum dolor sit amet elit sed do eiusmod tempor",
+            price: 4.55,
+            currency: {
+              name: "złoty",
+              sign: "zł"
+            },
+            img: '/images/hattori-hanzo-sushi/6.jpg',
+          },
+          {
+            name: "Seafood Starter",
+            description: "Lorem ipsum dolor sit amet elit sed do eiusmod tempor",
+            price: 3.95,
+            currency: {
+              name: "złoty",
+              sign: "zł"
+            },
+            img: '/images/hattori-hanzo-sushi/7.jpg',
+          },
+          {
+            name: "Shrimp Nachos",
+            description: "Lorem ipsum dolor sit amet elit sed do eiusmod tempor",
+            price: 3.39,
+            currency: {
+              name: "złoty",
+              sign: "zł"
+            },
+            img: '/images/hattori-hanzo-sushi/8.jpg',
+          },
+          {
+            name: "Spicy Summer Wrap",
+            description: "Lorem ipsum dolor sit amet elit sed do eiusmod tempor",
+            price: 9.95,
+            currency: {
+              name: "złoty",
+              sign: "zł"
+            },
+            img: '/images/hattori-hanzo-sushi/5.jpg',
+          },
+          {
+            name: "Sashimi Salad",
+            description: "Lorem ipsum dolor sit amet elit sed do eiusmod tempor",
+            price: 4.55,
+            currency: {
+              name: "złoty",
+              sign: "zł"
+            },
+            img: '/images/hattori-hanzo-sushi/6.jpg',
+          },
+          {
+            name: "Seafood Starter",
+            description: "Lorem ipsum dolor sit amet elit sed do eiusmod tempor",
+            price: 3.95,
+            currency: {
+              name: "złoty",
+              sign: "zł"
+            },
+            img: '/images/hattori-hanzo-sushi/7.jpg',
+          },
+          {
+            name: "Shrimp Nachos",
+            description: "Lorem ipsum dolor sit amet elit sed do eiusmod tempor",
+            price: 3.39,
+            currency: {
+              name: "złoty",
+              sign: "zł"
             },
             img: '/images/hattori-hanzo-sushi/8.jpg',
           },
@@ -118,8 +198,8 @@ const restaurants = [
             description: "Lorem ipsum dolor sit amet elit sed do eiusmod tempor",
             price: 4.95,
             currency: {
-              name: "dolar",
-              sign: "$"
+              name: "złoty",
+              sign: "zł"
             },
             img: '/images/hattori-hanzo-sushi/9.jpg',
           },
@@ -128,8 +208,8 @@ const restaurants = [
             description: "Lorem ipsum dolor sit amet elit sed do eiusmod tempor",
             price: 4.45,
             currency: {
-              name: "dolar",
-              sign: "$"
+              name: "złoty",
+              sign: "zł"
             },
             img: '/images/hattori-hanzo-sushi/10.jpg',
           },
@@ -138,8 +218,8 @@ const restaurants = [
             description: "Lorem ipsum dolor sit amet elit sed do eiusmod tempor",
             price: 12.95,
             currency: {
-              name: "dolar",
-              sign: "$"
+              name: "złoty",
+              sign: "zł"
             },
             img: '/images/hattori-hanzo-sushi/11.jpg',
           },
@@ -148,8 +228,8 @@ const restaurants = [
             description: "Lorem ipsum dolor sit amet elit sed do eiusmod tempor",
             price: 7.95,
             currency: {
-              name: "dolar",
-              sign: "$"
+              name: "złoty",
+              sign: "zł"
             },
             img: '/images/hattori-hanzo-sushi/12.jpg',
           },
@@ -164,8 +244,8 @@ const restaurants = [
             description: "Lorem ipsum dolor sit amet elit sed do eiusmod tempor",
             price: 24.95,
             currency: {
-              name: "dolar",
-              sign: "$"
+              name: "złoty",
+              sign: "zł"
             },
             img: '/images/hattori-hanzo-sushi/13.jpg',
           },
@@ -174,8 +254,8 @@ const restaurants = [
             description: "Lorem ipsum dolor sit amet elit sed do eiusmod tempor",
             price: 8.00,
             currency: {
-              name: "dolar",
-              sign: "$"
+              name: "złoty",
+              sign: "zł"
             },
             img: '/images/hattori-hanzo-sushi/14.jpg',
           },
@@ -184,8 +264,8 @@ const restaurants = [
             description: "Lorem ipsum dolor sit amet elit sed do eiusmod tempor",
             price: 18.49,
             currency: {
-              name: "dolar",
-              sign: "$"
+              name: "złoty",
+              sign: "zł"
             },
             img: '/images/hattori-hanzo-sushi/15.jpg',
           },
@@ -194,8 +274,8 @@ const restaurants = [
             description: "Lorem ipsum dolor sit amet elit sed do eiusmod tempor",
             price: 31.95,
             currency: {
-              name: "dolar",
-              sign: "$"
+              name: "złoty",
+              sign: "zł"
             },
             img: '/images/hattori-hanzo-sushi/16.jpg',
           },
@@ -210,8 +290,8 @@ const restaurants = [
             description: "Lorem ipsum dolor sit amet elit sed do eiusmod tempor",
             price: 19.95,
             currency: {
-              name: "dolar",
-              sign: "$"
+              name: "złoty",
+              sign: "zł"
             },
             img: '/images/hattori-hanzo-sushi/17.jpg',
           },
@@ -220,8 +300,8 @@ const restaurants = [
             description: "Lorem ipsum dolor sit amet elit sed do eiusmod tempor",
             price: 21.95,
             currency: {
-              name: "dolar",
-              sign: "$"
+              name: "złoty",
+              sign: "zł"
             },
             img: '/images/hattori-hanzo-sushi/18.jpg',
           },
@@ -230,8 +310,8 @@ const restaurants = [
             description: "Lorem ipsum dolor sit amet elit sed do eiusmod tempor",
             price: 13.29,
             currency: {
-              name: "dolar",
-              sign: "$"
+              name: "złoty",
+              sign: "zł"
             },
             img: '/images/hattori-hanzo-sushi/19.jpg',
           },
@@ -240,8 +320,8 @@ const restaurants = [
             description: "Lorem ipsum dolor sit amet elit sed do eiusmod tempor",
             price: 14.95,
             currency: {
-              name: "dolar",
-              sign: "$"
+              name: "złoty",
+              sign: "zł"
             },
             img: '/images/hattori-hanzo-sushi/20.jpg',
           },

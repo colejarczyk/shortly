@@ -30,7 +30,7 @@ const styles = theme => ({
   },
   price: {
     fontWeight: '600',
-    color: 'red',
+    color: '#0288D1',
   },
 });
 
@@ -42,8 +42,8 @@ class ProductItem extends React.Component {
 
   render() {
     return (
-      <div className={this.props.classes.root} onClick={this.productCart('/aa/'+this.props.productId)}>
-        <Grid container spacing={12}>
+      <div className={this.props.classes.root}>
+        <Grid container spacing={16}>
           <Grid item xs={5} className={this.props.classes.imgRoot}>
             <img src={this.props.productImg} className={this.props.classes.img} alt={this.props.productName} />
           </Grid>
@@ -56,7 +56,7 @@ class ProductItem extends React.Component {
                 {this.props.productDescription}
               </p>
               <p className={this.props.classes.price}>
-                {this.props.productCurrencySign} {this.props.productPrice.toFixed(2)}
+                {this.props.productPrice} {this.props.productCurrencySign} 
               </p>
             </div>
           </Grid>
@@ -73,7 +73,7 @@ ProductItem.propTypes = {
   productName: PropTypes.string.isRequired,
   productDescription: PropTypes.string.isRequired,
   productCurrencySign: PropTypes.string.isRequired,
-  productPrice: PropTypes.number.isRequired,
+  productPrice: PropTypes.string.isRequired,
 };
 
 export default withStyles(styles)(ProductItem);

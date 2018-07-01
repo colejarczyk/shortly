@@ -10,9 +10,9 @@ const themeV1 = createMuiTheme({
   palette: {
     primary: {
       light: '#FFCCBC',
-      main: '#FF5722',
+      main: '#03A9F4',
       dark: '#E64A19',
-      contrastText: '#FFFFFF',
+      contrastText: '#212121',
     },
     text: {
       primary: '#212121',
@@ -24,6 +24,8 @@ const themeV1 = createMuiTheme({
     },
   },
  });
+
+window.apiUrl = 'https://menu.softingo.pl/';
 
 ReactDOM.render(
   <MuiThemeProvider theme={themeV1}>

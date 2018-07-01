@@ -9,7 +9,7 @@ const styles = theme => ({
     paddingRight: '13px',
   },
   activeStyle: {
-    textDecoration: 'underline',
+    color: '#0288D1'
   },
 });
 

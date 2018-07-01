@@ -12,13 +12,13 @@ const styles = theme => ({
 class ProductList extends React.Component {
   render() {
     return (
-      <div className={this.props.classes.products}>
+      <div id="productList" className={this.props.classes.products}>
         {this.props.products.map((product, index) => {
           return (
             <ProductItem
               key={`product_${index}`}
               productId={String(product.id)}
-              productImg={product.img}
+              productImg={`${window.apiUrl}/${product.thumbnail}`}
               productName={product.name}
               productDescription={product.description}
               productCurrencySign={product.currency.sign}

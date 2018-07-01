@@ -17,6 +17,43 @@ const styles = theme => ({
 });
 
 class Restaurant extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      restaurant: []
+    };
+  }
+
+  componentWillMount() {
+    fetch('https://menu.softingo.pl/api/restaurant/1')
+    .then(resp => resp.json())
+    .then(resp => {
+      this.setState({restaurant: [resp]});
+    });
+  }
+
+  componentDidMount() {
+    window.onscroll = function() {myFunction()};
+
+    // Get the navbar
+    var navbar = document.getElementById("navbar");
+
+    if (navbar == null) {
+      return;
+    }
+
+    // Get the offset position of the navbar
+    var sticky = navbar.offsetTop;
+
+    // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+    function myFunction() {
+      if (window.pageYOffset >= sticky) {
+        navbar.classList.add("sticky")
+      } else {
+        navbar.classList.remove("sticky");
+      }
+    }
+  }
 
   getCurrentMenu = (restaurant) => {
     let category = restaurant.filter(item => item.url === this.props.match.params.menu);
@@ -29,7 +66,7 @@ class Restaurant extends React.Component {
   render() {
     return (
       <div>
-        {restaurants
+        {this.state.restaurant
           .filter(item => item.url === this.props.match.params.name)
           .map((item, index) => {
             return (
@@ -37,16 +74,18 @@ class Restaurant extends React.Component {
 
                 <Header
                   categories={item.categories}
-                  backgroundImage={item.img}
+                  backgroundImage={`${window.apiUrl}${item.img}`}
                 />
 
-                <Details
-                  name={item.name}
-                  openingHours={item.openingHours}
-                  endingHours={item.endingHours}
-                />
+                <div id="navbar">
+                  <Details
+                    name={item.name}
+                    openingHours={item.openingHours}
+                    endingHours={item.endingHours}
+                  />
 
-                <MenuList menu={item.menu} url={item.url} />
+                  <MenuList menu={item.menu} url={item.url} />
+                </div>
                 <ProductList products={this.getCurrentMenu(item.menu)} />
               </div>
             );

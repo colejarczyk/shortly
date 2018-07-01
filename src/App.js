@@ -22,6 +22,7 @@ class App extends Component {
               <Route exact path="/" component={Dashboard} />
               <Route exact path="/restaurant/:name" component={Restaurant} />
               <Route exact path="/restaurant/:name/:menu" component={Restaurant} />
+              {/* <Route exact path="/restaurant/:name/:menu/:product" component={ProductCard} /> */}
             </div>
           </div>
         </Router>
