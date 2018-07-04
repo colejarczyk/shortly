@@ -2,9 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from 'material-ui/styles';
 import Grid from 'material-ui/Grid';
-import createHistory from "history/createBrowserHistory";
-
-const history = createHistory();
 
 const styles = theme => ({
   root: {
@@ -35,11 +32,6 @@ const styles = theme => ({
 });
 
 class ProductItem extends React.Component {
-
-  productCart = (url) => {
-    history.push(url);
-  };
-
   render() {
     return (
       <div className={this.props.classes.root}>
